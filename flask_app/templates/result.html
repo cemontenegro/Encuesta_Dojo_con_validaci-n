@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<title>Resultado</title>
+</head>
+<body>
+	<main>
+		<h1>Submitted Info:</h1>
+		<div  class="row align-items-start">
+			<h3 class="col">Nombre: </h3>
+			<h3 class="col">{{dojo.nombre}}</h3>
+		</div>
+		<div class="row align-items-start">
+			<h3 class="col">Ubicación Dojo: </h3>
+			<h3 class="col">{{dojo.ubicacion}}</h3>
+		</div>
+		<div class="row align-items-start">
+			<h3 class="col">Lenguaje Favorito: </h3>
+			<h3 class="col">{{dojo.idioma}}</h3>
+		</div>
+		<div class="row align-items-start">
+			<h3 class="col">Comentario:</h3>
+			<h3 class="col">{{dojo.comentario}}</h3>
+		</div>
+		<form method='GET' action='/'>
+			<button class="btn btn-warning">Go Back</button>
+		</form>
+	</main>
+</body>
+</html>
